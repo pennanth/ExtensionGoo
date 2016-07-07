@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>AzureFunctionsToolkit</id>
-	<title>Functions Toolkit</title>
+	<title>Azure Functions Toolkit</title>
     <version>0.3.3</version>
     <authors>Jordan</authors>
     <owners>Jordan</owners>
