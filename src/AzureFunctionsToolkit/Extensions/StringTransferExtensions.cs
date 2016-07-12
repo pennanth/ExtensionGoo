@@ -2,12 +2,35 @@
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
+using AzureFunctionsToolkit.Helpers;
 using Newtonsoft.Json;
 
 namespace AzureFunctionsToolkit.Extensions
 {
-    public static class UrlExtensiosn
+    public static class StringTransferExtensions
     {
+        public static async Task<TEntityResult> PostAndParse<TEntityResult, TEntitySend>(this string url, TEntitySend postObject, string method = "POST")
+        where TEntityResult : class
+        where TEntitySend : class
+            
+        {
+            var objSer = postObject.Serialise();
+
+            var config = HttpConfigHelper.GetJsonConfig(url, objSer);
+
+            var result = await HttpHelper.Transfer(config);
+
+            if (!result.IsSuccessCode)
+            {
+                return null;
+            }
+
+            var des = _deserialise<TEntityResult>(result.Result);
+
+            return des;
+        }
+
+
         public static async Task<TEntityType> GetAndParse<TEntityType>(this string url)
        where TEntityType : class
         {
@@ -23,7 +46,6 @@ namespace AzureFunctionsToolkit.Extensions
             var des = _deserialise<TEntityType>(result);
 
             return des;
-            ;
         }
 
         public static async Task<string> GetRaw(this string url)
