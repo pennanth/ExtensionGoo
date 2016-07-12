@@ -2,10 +2,10 @@
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
-using AzureFunctionsToolkit.Helpers;
+using AzureFunctionsToolkit.Portable.Helpers;
 using Newtonsoft.Json;
 
-namespace AzureFunctionsToolkit.Extensions
+namespace AzureFunctionsToolkit.Portable.Extensions
 {
     public static class StringTransferExtensions
     {

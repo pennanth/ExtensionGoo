@@ -7,9 +7,9 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using AzureFunctionsToolkit.Entity;
+using AzureFunctionsToolkit.Portable.Entity;
 
-namespace AzureFunctionsToolkit.Helpers
+namespace AzureFunctionsToolkit.Portable.Helpers
 {
     public static class HttpHelper
     {

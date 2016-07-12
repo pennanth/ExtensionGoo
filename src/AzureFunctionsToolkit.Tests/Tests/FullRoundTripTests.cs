@@ -4,7 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AzureFunctionsToolkit.Extensions;
+
+using AzureFunctionsToolkit.Portable.Extensions;
 using AzureFunctionsToolkit.Tests.Entity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

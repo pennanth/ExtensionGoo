@@ -59,15 +59,15 @@
     <Compile Include="Tests\UrlTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AzureFunctionsToolkit\AzureFunctionsToolkit.csproj">
-      <Project>{d60e8bae-d7ec-43ef-aad3-248e00b37c4e}</Project>
-      <Name>AzureFunctionsToolkit</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Data\JwtSampleEntity.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AzureFunctionsToolkit.Portable\AzureFunctionsToolkit.Portable.csproj">
+      <Project>{72f98dde-75fa-422f-8533-c49b39bc59ea}</Project>
+      <Name>AzureFunctionsToolkit.Portable</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
