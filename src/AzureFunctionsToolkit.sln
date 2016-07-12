@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunctionsToolkit", "AzureFunctionsToolkit\AzureFunctionsToolkit.csproj", "{D60E8BAE-D7EC-43EF-AAD3-248E00B37C4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunctionsToolkit.Tests", "AzureFunctionsToolkit.Tests\AzureFunctionsToolkit.Tests.csproj", "{D8FC45BD-177C-48F7-99AB-6DE5007872E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D60E8BAE-D7EC-43EF-AAD3-248E00B37C4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D60E8BAE-D7EC-43EF-AAD3-248E00B37C4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D60E8BAE-D7EC-43EF-AAD3-248E00B37C4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8FC45BD-177C-48F7-99AB-6DE5007872E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8FC45BD-177C-48F7-99AB-6DE5007872E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8FC45BD-177C-48F7-99AB-6DE5007872E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8FC45BD-177C-48F7-99AB-6DE5007872E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

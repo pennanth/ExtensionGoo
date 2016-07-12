@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace AzureFunctionsToolkit.Extensions
 {
-    public static class Extensiosn
+    public static class UrlExtensiosn
     {
         public static async Task<TEntityType> GetAndParse<TEntityType>(this string url)
        where TEntityType : class
