@@ -7,6 +7,15 @@ namespace ExtensionGoo.Tests.Tests
     [TestClass]
     public class SerialiseTests
     {
+
+        [TestMethod]
+        public async Task TestDeserialise()
+        {
+            var data = "{\"Name\":\"Jordan\",\"Age\":21}".DeSerialise<TestSerClass>();
+            
+            Assert.AreEqual(data.Name, "Jordan");
+        }
+
         [TestMethod]
         public async Task TestSerialiser()
         {
