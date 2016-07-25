@@ -1,3 +1,0 @@
-..\..\.nuget\NuGet.exe pack XamlingCore.nuspec
-
-pause

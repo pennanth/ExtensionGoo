@@ -1,3 +1,3 @@
-..\..\.nuget\NuGet.exe pack AzureFunctionsToolkit.nuspec
+..\..\.nuget\NuGet.exe pack ExpressionGoo.nuspec
 
 pause
