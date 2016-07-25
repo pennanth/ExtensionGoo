@@ -38,7 +38,7 @@ To serialise something:
 To go back the other way:
 
 ```C#
-var data = "{\"Name\":\"Jordan\",\"Age\":21}".DeSerialise<TestSerClass>();
+var data = "{\"Name\":\"Jordan\",\"Age\":21}".DeSerialise<EntityType>();
 
 ```
 
@@ -57,7 +57,7 @@ Parse the content of a URL in to an entity:
 ```c#
 var url = "http://jsonplaceholder.typicode.com/posts/1";
 
-var obj = await url.GetAndParse<TestEntity>();
+var obj = await url.GetAndParse<EntityType>();
 
 ```
 
@@ -66,6 +66,6 @@ Post an entity and get result
 ```c#
 var sampleUp = new SomeUploadEntity();
 
-var downloadResult = await url.PostAndParse<SomeResultEntity, SomeUploadEntity>(sampleData);
+var downloadResult = await url.PostAndParse<ResultEntityType, UploadEntityType>(sampleData);
 
 ```
