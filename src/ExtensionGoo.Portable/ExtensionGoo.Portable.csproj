@@ -34,12 +34,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Entity\HttpTranferConfig.cs" />
-    <Compile Include="Entity\HttpTransferResult.cs" />
-    <Compile Include="Extensions\StringSerialiseExtensions.cs" />
-    <Compile Include="Extensions\StringTransferExtensions.cs" />
-    <Compile Include="Helpers\HttpConfigHelper.cs" />
-    <Compile Include="Helpers\HttpHelper.cs" />
+    <Compile Include="..\ExtensionGoo.Standard\Entity\HttpTranferConfig.cs">
+      <Link>Entity\HttpTranferConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\ExtensionGoo.Standard\Entity\HttpTransferResult.cs">
+      <Link>Entity\HttpTransferResult.cs</Link>
+    </Compile>
+    <Compile Include="..\ExtensionGoo.Standard\Extensions\StringSerialiseExtensions.cs">
+      <Link>Extensions\StringSerialiseExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ExtensionGoo.Standard\Extensions\StringTransferExtensions.cs">
+      <Link>Extensions\StringTransferExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ExtensionGoo.Standard\Helpers\HttpConfigHelper.cs">
+      <Link>Helpers\HttpConfigHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\ExtensionGoo.Standard\Helpers\HttpHelper.cs">
+      <Link>Helpers\HttpHelper.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +63,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

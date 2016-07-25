@@ -1,6 +1,5 @@
-﻿using System;
-using System.Threading.Tasks;
-using ExtensionGoo.Portable.Extensions;
+﻿using System.Threading.Tasks;
+using ExtensionGoo.Standard.Extensions;
 using ExtensionGoo.Tests.Entity;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using ExtensionGoo.Portable.Extensions;
+using ExtensionGoo.Standard.Extensions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ExtensionGoo.Tests.Tests
