@@ -21,5 +21,18 @@ namespace ExtensionGoo.Tests.Tests
 
             Assert.IsFalse(result.IsValid);
         }
+
+        [TestMethod]
+        public async Task TestPost()
+        {
+            var url =
+                "[someurl]";
+
+            var img = File.ReadAllBytes("Data\\stan.jpg");
+
+            var postResult = await url.Post(img);
+
+            Assert.IsNotNull(postResult);
+        }
     }
 }

@@ -54,7 +54,6 @@ namespace ExtensionGoo.Standard.Helpers
                         message.Headers.Add("Accept-Encoding", config.AcceptEncoding);
                     }
 
-
                     // Accept:
                     if (!string.IsNullOrWhiteSpace(config.Accept))
                     {
@@ -72,7 +71,7 @@ namespace ExtensionGoo.Standard.Helpers
                     if (config.ByteData != null)
                     {
                         var content = new ByteArrayContent(config.ByteData, 0, config.ByteData.Length);
-
+                        content.Headers.Add("Content-Type", config.ContentEncoding ?? "application/octet-stream");
                         message.Content = content;
                     }
 

@@ -3,7 +3,7 @@
   <metadata>
     <id>ExtensionGoo</id>
 	<title>Extension Goo</title>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <authors>Jordan</authors>
     <owners>Jordan</owners>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
@@ -12,7 +12,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Some little helpers to make writing Azure Functions and other shortform apps in C# a little easier</description>
     <releaseNotes>	
-	Contact Jordan @jakkaj info@xamling.net. 
+	
+    0.0.4 - Added capability to send through headers. 
+
+    Contact Jordan @jakkaj. 
+
 	</releaseNotes>
     <copyright>Copyright 2014</copyright>
     <tags>Azure AzureFunctions Functions Toolkit Expre</tags>

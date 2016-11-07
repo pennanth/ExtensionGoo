@@ -10,11 +10,11 @@ namespace ExtensionGoo.Standard.Extensions
 {
     public static class StringTransferExtensions
     {
-        public static async Task<TEntityResult> PostAndParse<TEntityResult, TEntitySend>(this string url, 
-            TEntitySend postObject, string method = "POST", IDictionary<string,string> headers = null)
+        public static async Task<TEntityResult> PostAndParse<TEntityResult, TEntitySend>(this string url,
+            TEntitySend postObject, string method = "POST", IDictionary<string, string> headers = null)
         where TEntityResult : class
         where TEntitySend : class
-            
+
         {
             var objSer = postObject.Serialise();
 
@@ -36,7 +36,7 @@ namespace ExtensionGoo.Standard.Extensions
         public static async Task<TEntityType> GetAndParse<TEntityType>(this string url, IDictionary<string, string> headers = null)
        where TEntityType : class
         {
-            var config = HttpConfigHelper.GetJsonConfig(url, null, "GET", headers);
+            var config = HttpConfigHelper.GetJsonConfig(url, null, null, "GET", headers);
 
             var result = await HttpHelper.Transfer(config);
 
@@ -53,7 +53,26 @@ namespace ExtensionGoo.Standard.Extensions
         public static async Task<string> GetRaw(this string url, IDictionary<string, string> headers = null)
 
         {
-            var config = HttpConfigHelper.GetJsonConfig(url, null, "GET", headers);
+            var config = HttpConfigHelper.GetJsonConfig(url, null, null, "GET", headers);
+
+            var result = await HttpHelper.Transfer(config);
+
+            return result.Result;
+        }
+
+        public static async Task<string> Post(this string url, string data, IDictionary<string, string> headers = null)
+
+        {
+            var config = HttpConfigHelper.GetJsonConfig(url, data, null, "POST", headers);
+
+            var result = await HttpHelper.Transfer(config);
+
+            return result.Result;
+        }
+
+        public static async Task<string> Post(this string url, byte[] data, IDictionary<string, string> headers = null)
+        {
+            var config = HttpConfigHelper.GetJsonConfig(url, null, data, "POST", headers, "application/octet-stream");
 
             var result = await HttpHelper.Transfer(config);
 

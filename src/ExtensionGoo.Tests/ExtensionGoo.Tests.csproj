@@ -66,6 +66,9 @@
     <Content Include="Data\JwtSampleEntity.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\Stan.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ExtensionGoo.Portable\ExtensionGoo.Portable.csproj">
