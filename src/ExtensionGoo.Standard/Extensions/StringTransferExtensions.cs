@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -9,7 +10,8 @@ namespace ExtensionGoo.Standard.Extensions
 {
     public static class StringTransferExtensions
     {
-        public static async Task<TEntityResult> PostAndParse<TEntityResult, TEntitySend>(this string url, TEntitySend postObject, string method = "POST")
+        public static async Task<TEntityResult> PostAndParse<TEntityResult, TEntitySend>(this string url, 
+            TEntitySend postObject, string method = "POST", IDictionary<string,string> headers = null)
         where TEntityResult : class
         where TEntitySend : class
             
@@ -31,31 +33,31 @@ namespace ExtensionGoo.Standard.Extensions
         }
 
 
-        public static async Task<TEntityType> GetAndParse<TEntityType>(this string url)
+        public static async Task<TEntityType> GetAndParse<TEntityType>(this string url, IDictionary<string, string> headers = null)
        where TEntityType : class
         {
-            var h = new HttpClient();
+            var config = HttpConfigHelper.GetJsonConfig(url, null, "GET", headers);
 
-            var result = await h.GetStringAsync(new Uri(url, UriKind.Absolute));
+            var result = await HttpHelper.Transfer(config);
 
-            if (string.IsNullOrWhiteSpace(result))
+            if (!result.IsSuccessCode || result.Result == null)
             {
                 return null;
             }
 
-            var des = _deserialise<TEntityType>(result);
+            var des = _deserialise<TEntityType>(result.Result);
 
             return des;
         }
 
-        public static async Task<string> GetRaw(this string url)
+        public static async Task<string> GetRaw(this string url, IDictionary<string, string> headers = null)
 
         {
-            var h = new HttpClient();
+            var config = HttpConfigHelper.GetJsonConfig(url, null, "GET", headers);
 
-            var result = await h.GetStringAsync(new Uri(url, UriKind.Absolute));
+            var result = await HttpHelper.Transfer(config);
 
-            return result;
+            return result.Result;
         }
 
         private static T _deserialise<T>(string entity) where T : class

@@ -17,8 +17,6 @@ namespace ExtensionGoo.Standard.Helpers
         {
             var httpHandler = new HttpClientHandler();
 
-           
-
             using (var httpClient = new HttpClient(httpHandler))
             {
                 var method = HttpMethod.Get;

@@ -15,8 +15,8 @@ namespace ExtensionGoo.Standard.Entity
         public string Auth { get; set; }
         public string AuthScheme { get; set; }
 
-        public Dictionary<string, string> Headers { get; set; }
-        public Dictionary<string, string> Cookies { get; set; }
+        public IDictionary<string, string> Headers { get; set; }
+        public IDictionary<string, string> Cookies { get; set; }
 
         public string Accept { get; set; }
         public List<string> AcceptEncoding { get; set; }

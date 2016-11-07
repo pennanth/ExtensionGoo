@@ -5,7 +5,7 @@ namespace ExtensionGoo.Standard.Helpers
 {
     public static class HttpConfigHelper
     {
-        public static HttpTransferConfig GetJsonConfig(string url, string data)
+        public static HttpTransferConfig GetJsonConfig(string url, string data, string verb = "POST", IDictionary<string, string> headers = null)
         {
             return new HttpTransferConfig
             {
@@ -14,8 +14,8 @@ namespace ExtensionGoo.Standard.Helpers
                 IsValid = true,
                 Url = url,
                 BaseUrl = url,
-                Verb = "POST",
-                Headers = new Dictionary<string, string>(),
+                Verb = verb,
+                Headers = headers,
                 ContentEncoding = "application/json"
             };
         }
