@@ -3,25 +3,26 @@
   <metadata>
     <id>ExtensionGoo</id>
 	<title>Extension Goo</title>
-    <version>0.0.4</version>
-    <authors>Jordan</authors>
+    <version>0.0.5</version>
+    <authors>Jordan,pennanth</authors>
     <owners>Jordan</owners>
     <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/jakkaj/ExtensionGoo</projectUrl>
     <iconUrl>http://xamling.net/Media/Images/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Some little helpers to make writing Azure Functions and other shortform apps in C# a little easier</description>
-    <releaseNotes>	
-	
-    0.0.4 - Added capability to send through headers. 
+    <releaseNotes>
 
-    Contact Jordan @jakkaj. 
+      0.0.5 - Added exception reporting capability.
+      0.0.4 - Added capability to send through headers.
 
-	</releaseNotes>
-    <copyright>Copyright 2014</copyright>
-    <tags>Azure AzureFunctions Functions Toolkit Expre</tags>
+      Contact Jordan @jakkaj.
+
+    </releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Azure AzureFunctions Functions Toolkit</tags>
     <dependencies>     
-       <dependency id="Newtonsoft.Json" version="7.0.1" />
+       <dependency id="Newtonsoft.Json" version="9.0.1" />
     </dependencies>
   </metadata>
 </package>
