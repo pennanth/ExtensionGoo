@@ -6,7 +6,7 @@ namespace ExtensionGoo.Standard.Extensions
 {
     public static class SerialiseExtension
     {
-        public static TEntity DeSerialise<TEntity>(this string data)
+        public static TEntity Deserialise<TEntity>(this string data, Action<Exception> exceptionHandler = null)
             where TEntity : class
         {
             try
@@ -17,13 +17,14 @@ namespace ExtensionGoo.Standard.Extensions
             catch (Exception ex)
             {
                 Debug.WriteLine("JSON Load corrupt: {0}", ex.ToString());
+                exceptionHandler?.Invoke(ex);
             }
 
             return null;
         }
 
 
-        public static string Serialise<TEntity>(this TEntity obj)
+        public static string Serialise<TEntity>(this TEntity obj, Action<Exception> exceptionHandler = null)
             where TEntity : class
         {
             try
@@ -34,6 +35,7 @@ namespace ExtensionGoo.Standard.Extensions
             catch (Exception ex)
             {
                 Debug.WriteLine("JSON Load corrupt: {0}", ex.ToString());
+                exceptionHandler?.Invoke(ex);
             }
 
             return null;

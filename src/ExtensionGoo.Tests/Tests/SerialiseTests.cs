@@ -11,7 +11,7 @@ namespace ExtensionGoo.Tests.Tests
         [TestMethod]
         public async Task TestDeserialise()
         {
-            var data = "{\"Name\":\"Jordan\",\"Age\":21}".DeSerialise<TestSerClass>();
+            var data = "{\"Name\":\"Jordan\",\"Age\":21}".Deserialise<TestSerClass>();
             
             Assert.AreEqual(data.Name, "Jordan");
         }
